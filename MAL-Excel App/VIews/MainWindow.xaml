@@ -4,9 +4,13 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MAL_Excel_App"
+        xmlns:vm="clr-namespace:MAL_Excel_App.ViewModels"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
+    <Window.DataContext>
+        <vm:MainWindowsViewModel/>
+    </Window.DataContext>
     <Grid>
-        
+        <DataGrid x:Name="animeExcel" HorizontalAlignment="Left" VerticalAlignment="Top" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Width="600" Height="400" ItemsSource="{Binding AnimeListFromExcel}" Margin="8,10,0,0"/>
     </Grid>
 </Window>
