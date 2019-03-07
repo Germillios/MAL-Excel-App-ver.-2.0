@@ -6,13 +6,13 @@ namespace MAL_Excel_App.ViewModels
 {
     class MangaListViewModel : BaseViewModel
     {
-        public MangaListViewModel()
+        public MangaListViewModel(MalAppDBEntities context) : base(context)
         {
             FillMangaList();
         }
         private void FillMangaList()
         {
-            var query = (from manga in context.MangaListFromExcels select manga).ToList();
+            var query = (from manga in Context.MangaListFromExcels select manga).ToList();
             this.MangaListFromExcel = query;
         }
         private List<MangaListFromExcel> _mangaListFromExcel;

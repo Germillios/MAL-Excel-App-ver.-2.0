@@ -6,13 +6,13 @@ namespace MAL_Excel_App.ViewModels
 {
     class AnimeListViewModel : BaseViewModel
     {
-        public AnimeListViewModel()
+        public AnimeListViewModel(MalAppDBEntities context) : base(context)
         {
             FillAnimeList();
         }
         private void FillAnimeList()
         {
-            var query = (from anime in context.AnimeListFromExcels select anime).ToList();
+            var query = (from anime in Context.AnimeListFromExcels select anime).ToList();
             this.AnimeListFromExcel = query;
         }
         private List<AnimeListFromExcel> _animeListFromExcel;

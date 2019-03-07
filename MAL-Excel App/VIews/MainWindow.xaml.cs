@@ -1,4 +1,6 @@
-﻿using System;
+﻿using MAL_Excel_App.Models;
+using MAL_Excel_App.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +22,13 @@ namespace MAL_Excel_App
     /// </summary>
     public partial class MainWindow : Window
     {
+        MalAppDBEntities Context { get; }
         public MainWindow()
         {
             InitializeComponent();
+            Context = new MalAppDBEntities();
+            AnimeList.DataContext = new AnimeListViewModel(Context);
+            MangaList.DataContext = new MangaListViewModel(Context);
         }
     }
 }
