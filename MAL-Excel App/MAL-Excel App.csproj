@@ -68,35 +68,35 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="AnimeListFromExcel.cs">
+    <Compile Include="Models\AnimeListFromExcel.cs">
       <DependentUpon>DatabasesModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="AnimeListFromMAL.cs">
+    <Compile Include="Models\AnimeListFromMAL.cs">
       <DependentUpon>DatabasesModel.tt</DependentUpon>
     </Compile>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="DatabasesModel.Context.cs">
+    <Compile Include="Models\DatabasesModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DatabasesModel.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="DatabasesModel.cs">
+    <Compile Include="Models\DatabasesModel.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DatabasesModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="DatabasesModel.Designer.cs">
+    <Compile Include="Models\DatabasesModel.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DatabasesModel.edmx</DependentUpon>
     </Compile>
-    <Compile Include="MangaListFromExcel.cs">
+    <Compile Include="Models\MangaListFromExcel.cs">
       <DependentUpon>DatabasesModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="MangaListFromMAL.cs">
+    <Compile Include="Models\MangaListFromMAL.cs">
       <DependentUpon>DatabasesModel.tt</DependentUpon>
     </Compile>
     <Compile Include="VIews\MainWindow.xaml.cs">
@@ -122,11 +122,11 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EntityDeploy Include="DatabasesModel.edmx">
+    <EntityDeploy Include="Models\DatabasesModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>DatabasesModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="DatabasesModel.edmx.diagram">
+    <None Include="Models\DatabasesModel.edmx.diagram">
       <DependentUpon>DatabasesModel.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
@@ -138,16 +138,14 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Models\" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="DatabasesModel.Context.tt">
+    <Content Include="Models\DatabasesModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>DatabasesModel.edmx</DependentUpon>
       <LastGenOutput>DatabasesModel.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="DatabasesModel.tt">
+    <Content Include="Models\DatabasesModel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>DatabasesModel.edmx</DependentUpon>
       <LastGenOutput>DatabasesModel.cs</LastGenOutput>

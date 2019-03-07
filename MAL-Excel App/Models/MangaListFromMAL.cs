@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace MAL_Excel_App
+namespace MAL_Excel_App.Models
 {
     using System;
     using System.Collections.ObjectModel;
