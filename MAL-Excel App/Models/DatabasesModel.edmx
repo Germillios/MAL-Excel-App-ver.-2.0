@@ -126,13 +126,13 @@
           </Key>
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Title" Type="String" MaxLength="76" FixedLength="false" Unicode="true" />
-          <Property Name="Genres" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
-          <Property Name="Watched_episodes" Type="Int32" />
           <Property Name="Score" Type="Int32" />
-          <Property Name="Additional_information" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Watched_episodes" Type="Int32" />
           <Property Name="Episodes" Type="Int32" />
           <Property Name="Type" Type="String" MaxLength="26" FixedLength="false" Unicode="true" />
           <Property Name="My_status" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="Genres" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Additional_information" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="AnimeListFromMAL">
           <Key>
@@ -178,14 +178,14 @@
           </Key>
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Title" Type="String" MaxLength="73" FixedLength="false" Unicode="true" />
-          <Property Name="Read_chapters" Type="Int32" />
           <Property Name="Score" Type="Int32" />
+          <Property Name="Read_chapters" Type="Int32" />
+          <Property Name="Chapters" Type="Int32" />
           <Property Name="Read_volumes" Type="Int32" />
           <Property Name="Volumes" Type="Int32" />
-          <Property Name="Genres" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
-          <Property Name="Chapters" Type="Int32" />
           <Property Name="Type" Type="String" MaxLength="8" FixedLength="false" Unicode="true" />
           <Property Name="My_status" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="Genres" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
           <Property Name="Additional_information" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="MangaListFromMAL">

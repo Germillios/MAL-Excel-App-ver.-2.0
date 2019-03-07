@@ -16,12 +16,12 @@ namespace MAL_Excel_App.Models
     {
         public int ID { get; set; }
         public string Title { get; set; }
-        public string Genres { get; set; }
-        public Nullable<int> Watched_episodes { get; set; }
         public Nullable<int> Score { get; set; }
-        public string Additional_information { get; set; }
+        public Nullable<int> Watched_episodes { get; set; }
         public Nullable<int> Episodes { get; set; }
         public string Type { get; set; }
         public string My_status { get; set; }
+        public string Genres { get; set; }
+        public string Additional_information { get; set; }
     }
 }
