@@ -12,7 +12,7 @@
             <TabItem x:Name="AnimeList" Header="Anime List" d:DataContext="{d:DesignInstance d:Type=vm:AnimeListViewModel, IsDesignTimeCreatable=True}">
                 <Grid>
                     <StackPanel Orientation="Vertical" VerticalAlignment="Top" HorizontalAlignment="Left">
-                        <DataGrid x:Name="animeExcel" HorizontalAlignment="Left" VerticalAlignment="Top" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Width="740" Height="368" Margin="11,10,0,0" ItemsSource="{Binding AnimeListFromExcel}" SelectedItem="{Binding SelectedAnime}"/>
+                        <DataGrid x:Name="animeExcel" HorizontalAlignment="Left" VerticalAlignment="Top" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Width="740" Height="368" Margin="11,10,0,0" ItemsSource="{Binding AnimeListFromExcel}" SelectedItem="{Binding SelectedAnime, Mode=TwoWay}"/>
                         <StackPanel Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Left">
                             <Button x:Name="btnAddA" Content="Add" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="25,10,0,0" Command="{Binding AddAnimeCommand}"/>
                             <Button x:Name="btnUpdateA" Content="Update" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="25,10,0,0" Command="{Binding UpdateAnimeCommand}"/>
@@ -42,7 +42,7 @@
                         <TextBox x:Name="watched_episodesTextBoxNewA" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Height="20" Margin="3" Text="{Binding AnimeInfo.Watched_episodes, Mode=TwoWay}"/>
                         <TextBox x:Name="episodesTextBoxNewA" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Height="20" Margin="3" Text="{Binding AnimeInfo.Episodes, Mode=TwoWay}"/>
                         <TextBox x:Name="typeTextBoxNewA" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Height="20" Margin="3" Text="{Binding AnimeInfo.Type, Mode=TwoWay}"/>
-                        <TextBox x:Name="my_statusTextBoxNewA" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Height="20" Margin="3" Text="{Binding AnimeInfo.My_Status, Mode=TwoWay}"/>
+                        <TextBox x:Name="my_statusTextBoxNewA" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Height="20" Margin="3" Text="{Binding AnimeInfo.My_status, Mode=TwoWay}"/>
                         <TextBox x:Name="genresTextBoxNewA" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Height="20" Margin="3" Text="{Binding AnimeInfo.Genres, Mode=TwoWay}"/>
                         <TextBox x:Name="additional_informationTextBoxNewA" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Height="20" Margin="3" Text="{Binding AnimeInfo.Additional_information, Mode=TwoWay}"/>
                     </StackPanel>
@@ -51,7 +51,7 @@
             <TabItem x:Name="MangaList" Header="Manga List" d:DataContext="{d:DesignInstance d:Type=vm:MangaListViewModel, IsDesignTimeCreatable=True}">
                 <Grid>
                     <StackPanel Orientation="Vertical" VerticalAlignment="Top" HorizontalAlignment="Left">
-                        <DataGrid x:Name="mangaExcel" HorizontalAlignment="Left" VerticalAlignment="Top" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Width="740" Height="368" Margin="11,10,0,0" ItemsSource="{Binding MangaListFromExcel}" SelectedItem="{Binding SelectedManga}" />
+                        <DataGrid x:Name="mangaExcel" HorizontalAlignment="Left" VerticalAlignment="Top" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Width="740" Height="368" Margin="11,10,0,0" ItemsSource="{Binding MangaListFromExcel}" SelectedItem="{Binding SelectedManga, Mode=TwoWay}"/>
                         <StackPanel Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Left">
                             <Button x:Name="btnAddM" Content="Add" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="25,10,0,0" Command="{Binding AddMangaCommand}"/>
                             <Button x:Name="btnUpdateM" Content="Update" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="25,10,0,0" Command="{Binding UpdateMangaCommand}"/>
@@ -85,7 +85,7 @@
                         <TextBox x:Name="read_volumesTextBoxNewM" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Height="20" Margin="3" Text="{Binding MangaInfo.Read_volumes, Mode=TwoWay}"/>
                         <TextBox x:Name="volumesTextBoxNewM" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Height="20" Margin="3" Text="{Binding MangaInfo.Volumes, Mode=TwoWay}"/>
                         <TextBox x:Name="typeTextBoxNewM" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Height="20" Margin="3" Text="{Binding MangaInfo.Type, Mode=TwoWay}"/>
-                        <TextBox x:Name="my_statusTextBoxNewM" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Height="20" Margin="3" Text="{Binding MangaInfo.My_Status, Mode=TwoWay}"/>
+                        <TextBox x:Name="my_statusTextBoxNewM" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Height="20" Margin="3" Text="{Binding MangaInfo.My_status, Mode=TwoWay}"/>
                         <TextBox x:Name="genresTextBoxNewM" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Height="20" Margin="3" Text="{Binding MangaInfo.Genres, Mode=TwoWay}"/>
                         <TextBox x:Name="additional_informationTextBoxNewM" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Height="20" Margin="3" Text="{Binding MangaInfo.Additional_information, Mode=TwoWay}"/>
                     </StackPanel>
