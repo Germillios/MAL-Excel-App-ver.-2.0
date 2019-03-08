@@ -13,7 +13,7 @@
                 <DataGrid x:Name="animeExcel" HorizontalAlignment="Left" VerticalAlignment="Top" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Width="740" Height="368" Margin="11,10,0,0" ItemsSource="{Binding AnimeListFromExcel}" />
             </TabItem>
             <TabItem x:Name="MangaList" Header="Manga List" d:DataContext="{d:DesignInstance d:Type=vm:MangaListViewModel, IsDesignTimeCreatable=True}">
-                <DataGrid x:Name="mangaExcel" HorizontalAlignment="Left" VerticalAlignment="Top" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Width="740" Height="368" Margin="11,10,0,0" ItemsSource="{Binding MangaListFromExcel}" />
+                <DataGrid x:Name="mangaExcel" HorizontalAlignment="Left" VerticalAlignment="Top" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Width="740" Height="368" Margin="11,10,0,0" Grid.Column="0" Grid.Row="0"  ItemsSource="{Binding MangaListFromExcel}" />
             </TabItem>
         </TabControl>
     </Grid>

@@ -1,6 +1,8 @@
-﻿using MAL_Excel_App.Models;
+﻿using GalaSoft.MvvmLight.CommandWpf;
+using MAL_Excel_App.Models;
 using System.Collections.Generic;
 using System.Linq;
+using System.Windows.Input;
 
 namespace MAL_Excel_App.ViewModels
 {
@@ -22,7 +24,7 @@ namespace MAL_Excel_App.ViewModels
             set
             {
                 _animeListFromExcel = value;
-                NotifyPropertyChanged();
+                OnPropertyChanged();
             }
         }
         private List<AnimeListFromMAL> _animeListFromMAL;
@@ -32,8 +34,24 @@ namespace MAL_Excel_App.ViewModels
             set
             {
                 _animeListFromMAL = value;
-                NotifyPropertyChanged();
+                OnPropertyChanged();
             }
         }
+        #region Insert, Update, Delete
+        //private RelayCommand _addAnimeCommand;
+        //public ICommand AddAnimeCommand => _addAnimeCommand ?? (_addAnimeCommand = new RelayCommand(() =>
+        //{
+        //    Context.AnimeListFromExcels.Add(new AnimeListFromExcel {
+        //        Title = titleTextBoxNew.Text,
+        //        Score = int.Parse(scoreTextBoxNew.Text),
+        //        Watched_episodes = int.Parse(watched_episodes_or_read_chaptersTextBoxNew.Text),
+        //        Episodes = int.Parse(episodes_or_chaptersTextBoxNew.Text),
+        //        Type = typeTextBoxNew.Text,
+        //        My_status = my_statusTextBoxNew.Text,
+        //        Genres = genresTextBoxNew.Text,
+        //        Additional_information = additional_informationTextBoxNew.Text
+        //    });
+        //}, () => { }));
+        #endregion
     }
 }

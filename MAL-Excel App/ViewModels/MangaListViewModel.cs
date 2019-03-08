@@ -22,7 +22,7 @@ namespace MAL_Excel_App.ViewModels
             set
             {
                 _mangaListFromExcel = value;
-                NotifyPropertyChanged();
+                OnPropertyChanged();
             }
         }
         private List<MangaListFromMAL> _mangaListFromMAL;
@@ -32,7 +32,7 @@ namespace MAL_Excel_App.ViewModels
             set
             {
                 _mangaListFromMAL = value;
-                NotifyPropertyChanged();
+                OnPropertyChanged();
             }
         }
     }

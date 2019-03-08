@@ -1,7 +1,7 @@
 ﻿using MAL_Excel_App.Models;
-using System;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
+using System.ComponentModel.DataAnnotations;
 
 namespace MAL_Excel_App.ViewModels
 {
@@ -13,6 +13,6 @@ namespace MAL_Excel_App.ViewModels
             Context = context;
         }
         public event PropertyChangedEventHandler PropertyChanged;
-        protected void NotifyPropertyChanged([CallerMemberName] String propertyName = "") => PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        protected void OnPropertyChanged([CallerMemberName] string propertyName = "") => PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
     }
 }
