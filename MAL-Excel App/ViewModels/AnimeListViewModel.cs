@@ -25,7 +25,7 @@ namespace MAL_Excel_App.ViewModels
             set
             {
                 _animeListFromExcel = value;
-                OnPropertyChanged();
+                OnPropertyChanged(nameof(AnimeListFromExcel));
             }
         }
         private List<AnimeListFromMAL> _animeListFromMAL;
@@ -35,7 +35,7 @@ namespace MAL_Excel_App.ViewModels
             set
             {
                 _animeListFromMAL = value;
-                OnPropertyChanged();
+                OnPropertyChanged(nameof(AnimeListFromMAL));
             }
         }
         private AnimeListFromExcel _selectedAnime;
@@ -45,7 +45,7 @@ namespace MAL_Excel_App.ViewModels
             set
             {
                 _selectedAnime = value;
-                OnPropertyChanged();
+                OnPropertyChanged(nameof(SelectedAnime));
             }
         }
         #region Insert, Update, Delete

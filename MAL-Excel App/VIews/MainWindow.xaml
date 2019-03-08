@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:MAL_Excel_App"
         xmlns:vm="clr-namespace:MAL_Excel_App.ViewModels"
         mc:Ignorable="d"
-        Title="MainWindow" Height="480" Width="1200" ResizeMode="NoResize">
+        Title="MAL-Excel App 2.0" Height="480" Width="1200" ResizeMode="NoResize">
     <Grid>
         <TabControl x:Name="AppTabControl" HorizontalAlignment="Left" VerticalAlignment="Top" Width="1200" Height="450">
             <TabItem x:Name="AnimeList" Header="Anime List" d:DataContext="{d:DesignInstance d:Type=vm:AnimeListViewModel, IsDesignTimeCreatable=True}">
@@ -14,7 +14,6 @@
                     <StackPanel Orientation="Vertical" VerticalAlignment="Top" HorizontalAlignment="Left">
                         <DataGrid x:Name="animeExcel" HorizontalAlignment="Left" VerticalAlignment="Top" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Width="740" Height="368" Margin="11,10,0,0" ItemsSource="{Binding AnimeListFromExcel}" SelectedItem="{Binding SelectedAnime, Mode=TwoWay}"/>
                         <StackPanel Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Left">
-                            <Button x:Name="btnAddA" Content="Add" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="25,10,0,0" Command="{Binding AddAnimeCommand}"/>
                             <Button x:Name="btnUpdateA" Content="Update" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="25,10,0,0" Command="{Binding UpdateAnimeCommand}"/>
                             <Button x:Name="btnDeleteA" Content="Delete" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="25,10,0,0" Command="{Binding DeleteAnimeCommand}"/>
                         </StackPanel>
@@ -46,6 +45,9 @@
                         <TextBox x:Name="genresTextBoxNewA" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Height="20" Margin="3" Text="{Binding AnimeInfo.Genres, Mode=TwoWay}"/>
                         <TextBox x:Name="additional_informationTextBoxNewA" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Height="20" Margin="3" Text="{Binding AnimeInfo.Additional_information, Mode=TwoWay}"/>
                     </StackPanel>
+                    <StackPanel Orientation="Horizontal" VerticalAlignment="Top"  HorizontalAlignment="Left" Margin="920,220,0,0">
+                        <Button x:Name="btnAddA" Content="Add" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="25,10,0,0" Command="{Binding AddAnimeCommand}"/>
+                    </StackPanel>
                 </Grid>
             </TabItem>
             <TabItem x:Name="MangaList" Header="Manga List" d:DataContext="{d:DesignInstance d:Type=vm:MangaListViewModel, IsDesignTimeCreatable=True}">
@@ -53,7 +55,6 @@
                     <StackPanel Orientation="Vertical" VerticalAlignment="Top" HorizontalAlignment="Left">
                         <DataGrid x:Name="mangaExcel" HorizontalAlignment="Left" VerticalAlignment="Top" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Width="740" Height="368" Margin="11,10,0,0" ItemsSource="{Binding MangaListFromExcel}" SelectedItem="{Binding SelectedManga, Mode=TwoWay}"/>
                         <StackPanel Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Left">
-                            <Button x:Name="btnAddM" Content="Add" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="25,10,0,0" Command="{Binding AddMangaCommand}"/>
                             <Button x:Name="btnUpdateM" Content="Update" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="25,10,0,0" Command="{Binding UpdateMangaCommand}"/>
                             <Button x:Name="btnDeleteM" Content="Delete" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="25,10,0,0" Command="{Binding DeleteMangaCommand}"/>
                         </StackPanel>
@@ -88,6 +89,9 @@
                         <TextBox x:Name="my_statusTextBoxNewM" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Height="20" Margin="3" Text="{Binding MangaInfo.My_status, Mode=TwoWay}"/>
                         <TextBox x:Name="genresTextBoxNewM" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Height="20" Margin="3" Text="{Binding MangaInfo.Genres, Mode=TwoWay}"/>
                         <TextBox x:Name="additional_informationTextBoxNewM" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Height="20" Margin="3" Text="{Binding MangaInfo.Additional_information, Mode=TwoWay}"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" VerticalAlignment="Top"  HorizontalAlignment="Left" Margin="920,270,0,0">
+                        <Button x:Name="btnAddM" Content="Add" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="25,10,0,0" Command="{Binding AddMangaCommand}"/>
                     </StackPanel>
                 </Grid>
             </TabItem>

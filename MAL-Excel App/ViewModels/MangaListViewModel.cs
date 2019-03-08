@@ -25,7 +25,7 @@ namespace MAL_Excel_App.ViewModels
             set
             {
                 _mangaListFromExcel = value;
-                OnPropertyChanged();
+                OnPropertyChanged(nameof(MangaListFromExcel));
             }
         }
         private List<MangaListFromMAL> _mangaListFromMAL;
@@ -35,7 +35,7 @@ namespace MAL_Excel_App.ViewModels
             set
             {
                 _mangaListFromMAL = value;
-                OnPropertyChanged();
+                OnPropertyChanged(nameof(MangaListFromMAL));
             }
         }
         private MangaListFromExcel _selectedManga;
@@ -45,7 +45,7 @@ namespace MAL_Excel_App.ViewModels
             set
             {
                 _selectedManga = value;
-                OnPropertyChanged();
+                OnPropertyChanged(nameof(SelectedManga));
             }
         }
         #region Insert, Update, Delete
