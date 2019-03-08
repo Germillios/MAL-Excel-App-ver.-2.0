@@ -37,14 +37,14 @@
                         <Label Content="Additional information:" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="0"/>
                     </StackPanel>
                     <StackPanel Orientation="Vertical" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="1000,10,0,0">
-                        <TextBox x:Name="titleTextBoxNewA" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Height="20" Margin="3" Text="{Binding AnimeInfo.Title}"/>
-                        <TextBox x:Name="scoreTextBoxNewA" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Height="20" Margin="3" Text="{Binding AnimeInfo.Score}"/>
-                        <TextBox x:Name="watched_episodesTextBoxNewA" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Height="20" Margin="3" Text="{Binding AnimeInfo.Watched_episodes}"/>
-                        <TextBox x:Name="episodesTextBoxNewA" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Height="20" Margin="3" Text="{Binding AnimeInfo.Episodes}"/>
-                        <TextBox x:Name="typeTextBoxNewA" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Height="20" Margin="3" Text="{Binding AnimeInfo.Type}"/>
-                        <TextBox x:Name="my_statusTextBoxNewA" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Height="20" Margin="3" Text="{Binding AnimeInfo.My_Status}"/>
-                        <TextBox x:Name="genresTextBoxNewA" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Height="20" Margin="3" Text="{Binding AnimeInfo.Genres}"/>
-                        <TextBox x:Name="additional_informationTextBoxNewA" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Height="20" Margin="3" Text="{Binding Additional_information}"/>
+                        <TextBox x:Name="titleTextBoxNewA" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Height="20" Margin="3" Text="{Binding AnimeInfo.Title, Mode=TwoWay}"/>
+                        <TextBox x:Name="scoreTextBoxNewA" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Height="20" Margin="3" Text="{Binding AnimeInfo.Score, Mode=TwoWay}"/>
+                        <TextBox x:Name="watched_episodesTextBoxNewA" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Height="20" Margin="3" Text="{Binding AnimeInfo.Watched_episodes, Mode=TwoWay}"/>
+                        <TextBox x:Name="episodesTextBoxNewA" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Height="20" Margin="3" Text="{Binding AnimeInfo.Episodes, Mode=TwoWay}"/>
+                        <TextBox x:Name="typeTextBoxNewA" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Height="20" Margin="3" Text="{Binding AnimeInfo.Type, Mode=TwoWay}"/>
+                        <TextBox x:Name="my_statusTextBoxNewA" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Height="20" Margin="3" Text="{Binding AnimeInfo.My_Status, Mode=TwoWay}"/>
+                        <TextBox x:Name="genresTextBoxNewA" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Height="20" Margin="3" Text="{Binding AnimeInfo.Genres, Mode=TwoWay}"/>
+                        <TextBox x:Name="additional_informationTextBoxNewA" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Height="20" Margin="3" Text="{Binding AnimeInfo.Additional_information, Mode=TwoWay}"/>
                     </StackPanel>
                 </Grid>
             </TabItem>
@@ -78,16 +78,16 @@
                         <Label Content="Additional information:" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="0"/>
                     </StackPanel>
                     <StackPanel Orientation="Vertical" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="1000,10,0,0">
-                        <TextBox x:Name="titleTextBoxNewM" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Height="20" Margin="3" Text="{Binding MangaInfo.Title}"/>
-                        <TextBox x:Name="scoreTextBoxNewM" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Height="20" Margin="3" Text="{Binding MangaInfo.Score}"/>
-                        <TextBox x:Name="read_chaptersTextBoxNewM" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Height="20" Margin="3" Text="{Binding MangaInfo.Read_chapters}"/>
-                        <TextBox x:Name="chaptersTextBoxNewM" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Height="20" Margin="3" Text="{Binding MangaInfo.Chapters}"/>
-                        <TextBox x:Name="read_volumesTextBoxNewM" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Height="20" Margin="3" Text="{Binding MangaInfo.Read_volumes}"/>
-                        <TextBox x:Name="volumesTextBoxNewM" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Height="20" Margin="3" Text="{Binding MangaInfo.Volumes}"/>
-                        <TextBox x:Name="typeTextBoxNewM" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Height="20" Margin="3" Text="{Binding MangaInfo.Type}"/>
-                        <TextBox x:Name="my_statusTextBoxNewM" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Height="20" Margin="3" Text="{Binding MangaInfo.My_Status}"/>
-                        <TextBox x:Name="genresTextBoxNewM" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Height="20" Margin="3" Text="{Binding MangaInfo.Genres}"/>
-                        <TextBox x:Name="additional_informationTextBoxNewM" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Height="20" Margin="3" Text="{Binding Additional_information}"/>
+                        <TextBox x:Name="titleTextBoxNewM" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Height="20" Margin="3" Text="{Binding MangaInfo.Title, Mode=TwoWay}"/>
+                        <TextBox x:Name="scoreTextBoxNewM" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Height="20" Margin="3" Text="{Binding MangaInfo.Score, Mode=TwoWay}"/>
+                        <TextBox x:Name="read_chaptersTextBoxNewM" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Height="20" Margin="3" Text="{Binding MangaInfo.Read_chapters, Mode=TwoWay}"/>
+                        <TextBox x:Name="chaptersTextBoxNewM" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Height="20" Margin="3" Text="{Binding MangaInfo.Chapters, Mode=TwoWay}"/>
+                        <TextBox x:Name="read_volumesTextBoxNewM" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Height="20" Margin="3" Text="{Binding MangaInfo.Read_volumes, Mode=TwoWay}"/>
+                        <TextBox x:Name="volumesTextBoxNewM" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Height="20" Margin="3" Text="{Binding MangaInfo.Volumes, Mode=TwoWay}"/>
+                        <TextBox x:Name="typeTextBoxNewM" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Height="20" Margin="3" Text="{Binding MangaInfo.Type, Mode=TwoWay}"/>
+                        <TextBox x:Name="my_statusTextBoxNewM" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Height="20" Margin="3" Text="{Binding MangaInfo.My_Status, Mode=TwoWay}"/>
+                        <TextBox x:Name="genresTextBoxNewM" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Height="20" Margin="3" Text="{Binding MangaInfo.Genres, Mode=TwoWay}"/>
+                        <TextBox x:Name="additional_informationTextBoxNewM" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Height="20" Margin="3" Text="{Binding MangaInfo.Additional_information, Mode=TwoWay}"/>
                     </StackPanel>
                 </Grid>
             </TabItem>
