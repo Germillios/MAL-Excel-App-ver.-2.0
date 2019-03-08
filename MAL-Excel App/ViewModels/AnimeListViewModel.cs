@@ -1,7 +1,6 @@
 ﻿using GalaSoft.MvvmLight.CommandWpf;
 using MAL_Excel_App.Models;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.Linq;
 using System.Windows.Input;
 
@@ -87,16 +86,4 @@ namespace MAL_Excel_App.ViewModels
         () => SelectedAnime != null));
         #endregion
     }
-    //internal class AnimeInfo
-    //{
-    //    public int ID { get; set; }
-    //    public string Title { get; set; }
-    //    public int Score { get; set; }
-    //    public int Watched_episodes { get; set; }
-    //    public int Episodes { get; set; }
-    //    public string Type { get; set; }
-    //    public string My_status { get; set; }
-    //    public string Genres { get; set; }
-    //    public string Additional_information { get; set; }
-    //}
 }

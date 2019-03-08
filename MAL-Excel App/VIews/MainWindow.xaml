@@ -14,7 +14,7 @@
                     <StackPanel Orientation="Vertical" VerticalAlignment="Top" HorizontalAlignment="Left">
                         <DataGrid x:Name="animeExcel" HorizontalAlignment="Left" VerticalAlignment="Top" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Width="740" Height="368" Margin="11,10,0,0" ItemsSource="{Binding AnimeListFromExcel}" SelectedItem="{Binding SelectedAnime}"/>
                         <StackPanel Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Left">
-                            <Button x:Name="btnAdd" Content="Add" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="25,10,0,0"/>
+                            <Button x:Name="btnAdd" Content="Add" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="25,10,0,0" Command="{Binding AddAnimeCommand}"/>
                             <Button x:Name="btnUpdate" Content="Update" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="25,10,0,0" Command="{Binding UpdateAnimeCommand}"/>
                             <Button x:Name="btnDelete" Content="Delete" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="25,10,0,0" Command="{Binding DeleteAnimeCommand}"/>
                         </StackPanel>
@@ -51,36 +51,6 @@
             <TabItem x:Name="MangaList" Header="Manga List" d:DataContext="{d:DesignInstance d:Type=vm:MangaListViewModel, IsDesignTimeCreatable=True}">
                 <DataGrid x:Name="mangaExcel" HorizontalAlignment="Left" VerticalAlignment="Top" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Width="740" Height="368" Margin="11,10,0,0" Grid.Column="0" Grid.Row="0"  ItemsSource="{Binding MangaListFromExcel}" />
             </TabItem>
-            <!-- <TabItem x:Name="AddNewItem" Header="Add to List">
-                <Grid x:Name="newAorMGrid" Background="White" IsEnabled="True">
-                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Top">
-                        <RadioButton x:Name="AnimeSelected" Content="Anime" HorizontalAlignment="Left" Margin="16,11,0,0" VerticalAlignment="Top" IsChecked="True"/>
-                        <RadioButton x:Name="MangaSelected" Content="Manga" HorizontalAlignment="Left" Margin="39,11,0,0" VerticalAlignment="Top"/>
-                    </StackPanel>
-                    <StackPanel x:Name="newItemTextBoxesPanel" Orientation="Vertical" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="26 36">
-                        <TextBox x:Name="titleTextBoxNew" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="3"/>
-                        <TextBox x:Name="scoreTextBoxNew" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="3"/>
-                        <StackPanel Orientation="Horizontal">
-                            <TextBox x:Name="watched_episodes_or_read_chaptersTextBoxNew" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="3"/>
-                            <Label Content="/"/>
-                            <TextBox x:Name="episodes_or_chaptersTextBoxNew" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="3"/>
-                        </StackPanel>
-                        <StackPanel Orientation="Horizontal" IsEnabled="{Binding IsChecked, ElementName=MangaSelected}">
-                            <TextBox x:Name="read_volumesTextBoxNew" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="3"/>
-                            <Label Content="/"/>
-                            <TextBox x:Name="volumesTextBoxNew" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="3"/>
-                        </StackPanel>
-                        <TextBox x:Name="typeTextBoxNew" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="3"/>
-                        <TextBox x:Name="my_statusTextBoxNew" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="3"/>
-                        <TextBox x:Name="genresTextBoxNew" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="3"/>
-                        <TextBox x:Name="additional_informationTextBoxNew" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="3"/>
-                    </StackPanel>
-                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="16,236,0,0">
-                        <Button x:Name="btnAdd" Content="Add" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Command="{StaticResource AddCommand}" Style="{StaticResource NavigationButton}"/>
-                        <Button x:Name="btnCancel" Content="Cancel" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="6 0" Width="75" Command="{StaticResource CancelAddingComand}" Style="{StaticResource NavigationButton}"/>
-                    </StackPanel>
-                </Grid>
-            </TabItem> -->
         </TabControl>
     </Grid>
 </Window>
