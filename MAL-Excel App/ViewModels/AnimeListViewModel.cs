@@ -28,16 +28,6 @@ namespace MAL_Excel_App.ViewModels
                 OnPropertyChanged(nameof(AnimeListFromExcel));
             }
         }
-        private List<AnimeListFromMAL> _animeListFromMAL;
-        public List<AnimeListFromMAL> AnimeListFromMAL
-        {
-            get { return _animeListFromMAL; }
-            set
-            {
-                _animeListFromMAL = value;
-                OnPropertyChanged(nameof(AnimeListFromMAL));
-            }
-        }
         private AnimeListFromExcel _selectedAnime;
         public AnimeListFromExcel SelectedAnime
         {

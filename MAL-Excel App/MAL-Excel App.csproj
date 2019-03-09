@@ -86,9 +86,6 @@
     <Compile Include="Models\AnimeListFromExcel.cs">
       <DependentUpon>DatabasesModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\AnimeListFromMAL.cs">
-      <DependentUpon>DatabasesModel.tt</DependentUpon>
-    </Compile>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -109,9 +106,6 @@
       <DependentUpon>DatabasesModel.edmx</DependentUpon>
     </Compile>
     <Compile Include="Models\MangaListFromExcel.cs">
-      <DependentUpon>DatabasesModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\MangaListFromMAL.cs">
       <DependentUpon>DatabasesModel.tt</DependentUpon>
     </Compile>
     <Compile Include="ViewModels\BaseViewModel.cs" />

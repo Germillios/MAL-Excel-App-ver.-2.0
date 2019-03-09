@@ -28,16 +28,6 @@ namespace MAL_Excel_App.ViewModels
                 OnPropertyChanged(nameof(MangaListFromExcel));
             }
         }
-        private List<MangaListFromMAL> _mangaListFromMAL;
-        public List<MangaListFromMAL> MangaListFromMAL
-        {
-            get { return _mangaListFromMAL; }
-            set
-            {
-                _mangaListFromMAL = value;
-                OnPropertyChanged(nameof(MangaListFromMAL));
-            }
-        }
         private MangaListFromExcel _selectedManga;
         public MangaListFromExcel SelectedManga
         {

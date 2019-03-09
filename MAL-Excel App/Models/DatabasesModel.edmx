@@ -19,44 +19,6 @@
           <Property Name="Type" Type="nvarchar" MaxLength="26" />
           <Property Name="My status" Type="nvarchar" MaxLength="15" />
         </EntityType>
-        <EntityType Name="AnimeListFromMAL">
-          <Key>
-            <PropertyRef Name="ID" />
-          </Key>
-          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="myanimelist" Type="int" />
-          <Property Name="myanimelist_myinfo" Type="int" />
-          <Property Name="myanimelist_myinfo_user_id" Type="int" />
-          <Property Name="myanimelist_myinfo_user_name" Type="nvarchar" MaxLength="6" />
-          <Property Name="myanimelist_myinfo_user_export_type" Type="int" />
-          <Property Name="myanimelist_myinfo_user_total_anime" Type="int" />
-          <Property Name="myanimelist_myinfo_user_total_watching" Type="int" />
-          <Property Name="myanimelist_myinfo_user_total_completed" Type="int" />
-          <Property Name="myanimelist_myinfo_user_total_onhold" Type="int" />
-          <Property Name="myanimelist_myinfo_user_total_dropped" Type="int" />
-          <Property Name="myanimelist_myinfo_user_total_plantowatch" Type="int" />
-          <Property Name="myanimelist_anime" Type="int" />
-          <Property Name="myanimelist_anime_series_animedb_id" Type="int" />
-          <Property Name="myanimelist_anime_series_title" Type="nvarchar" MaxLength="98" />
-          <Property Name="myanimelist_anime_series_type" Type="nvarchar" MaxLength="7" />
-          <Property Name="myanimelist_anime_series_episodes" Type="int" />
-          <Property Name="myanimelist_anime_my_id" Type="int" />
-          <Property Name="myanimelist_anime_my_watched_episodes" Type="int" />
-          <Property Name="myanimelist_anime_my_start_date" Type="nvarchar" MaxLength="10" />
-          <Property Name="myanimelist_anime_my_finish_date" Type="nvarchar" MaxLength="10" />
-          <Property Name="myanimelist_anime_my_rated" Type="int" />
-          <Property Name="myanimelist_anime_my_score" Type="int" />
-          <Property Name="myanimelist_anime_my_dvd" Type="int" />
-          <Property Name="myanimelist_anime_my_storage" Type="int" />
-          <Property Name="myanimelist_anime_my_status" Type="nvarchar" MaxLength="13" />
-          <Property Name="myanimelist_anime_my_comments" Type="int" />
-          <Property Name="myanimelist_anime_my_times_watched" Type="int" />
-          <Property Name="myanimelist_anime_my_rewatch_value" Type="int" />
-          <Property Name="myanimelist_anime_my_tags" Type="int" />
-          <Property Name="myanimelist_anime_my_rewatching" Type="int" />
-          <Property Name="myanimelist_anime_my_rewatching_ep" Type="int" />
-          <Property Name="myanimelist_anime_update_on_import" Type="int" />
-        </EntityType>
         <EntityType Name="MangaListFromExcel">
           <Key>
             <PropertyRef Name="ID" />
@@ -73,47 +35,9 @@
           <Property Name="My status" Type="nvarchar" MaxLength="15" />
           <Property Name="Additional information" Type="nvarchar" MaxLength="20" />
         </EntityType>
-        <EntityType Name="MangaListFromMAL">
-          <Key>
-            <PropertyRef Name="ID" />
-          </Key>
-          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="myanimelist" Type="int" />
-          <Property Name="myanimelist_myinfo" Type="int" />
-          <Property Name="myanimelist_myinfo_user_id" Type="int" />
-          <Property Name="myanimelist_myinfo_user_name" Type="nvarchar" MaxLength="6" />
-          <Property Name="myanimelist_myinfo_user_export_type" Type="int" />
-          <Property Name="myanimelist_myinfo_user_total_manga" Type="int" />
-          <Property Name="myanimelist_myinfo_user_total_reading" Type="int" />
-          <Property Name="myanimelist_myinfo_user_total_completed" Type="int" />
-          <Property Name="myanimelist_myinfo_user_total_onhold" Type="int" />
-          <Property Name="myanimelist_myinfo_user_total_dropped" Type="int" />
-          <Property Name="myanimelist_myinfo_user_total_plantoread" Type="int" />
-          <Property Name="myanimelist_manga" Type="int" />
-          <Property Name="myanimelist_manga_manga_mangadb_id" Type="int" />
-          <Property Name="myanimelist_manga_manga_title" Type="nvarchar" MaxLength="76" />
-          <Property Name="myanimelist_manga_manga_volumes" Type="int" />
-          <Property Name="myanimelist_manga_manga_chapters" Type="int" />
-          <Property Name="myanimelist_manga_my_id" Type="int" />
-          <Property Name="myanimelist_manga_my_read_volumes" Type="int" />
-          <Property Name="myanimelist_manga_my_read_chapters" Type="int" />
-          <Property Name="myanimelist_manga_my_start_date" Type="nvarchar" MaxLength="10" />
-          <Property Name="myanimelist_manga_my_finish_date" Type="nvarchar" MaxLength="10" />
-          <Property Name="myanimelist_manga_my_scanalation_group" Type="int" />
-          <Property Name="myanimelist_manga_my_score" Type="int" />
-          <Property Name="myanimelist_manga_my_storage" Type="int" />
-          <Property Name="myanimelist_manga_my_status" Type="nvarchar" MaxLength="12" />
-          <Property Name="myanimelist_manga_my_comments" Type="int" />
-          <Property Name="myanimelist_manga_my_times_read" Type="int" />
-          <Property Name="myanimelist_manga_my_tags" Type="int" />
-          <Property Name="myanimelist_manga_my_reread_value" Type="int" />
-          <Property Name="myanimelist_manga_update_on_import" Type="int" />
-        </EntityType>
         <EntityContainer Name="MalAppDBModelStoreContainer">
           <EntitySet Name="AnimeListFromExcel" EntityType="Self.AnimeListFromExcel" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="AnimeListFromMAL" EntityType="Self.AnimeListFromMAL" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="MangaListFromExcel" EntityType="Self.MangaListFromExcel" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="MangaListFromMAL" EntityType="Self.MangaListFromMAL" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
       </Schema>
     </edmx:StorageModels>
@@ -134,44 +58,6 @@
           <Property Name="Genres" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
           <Property Name="Additional_information" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
         </EntityType>
-        <EntityType Name="AnimeListFromMAL">
-          <Key>
-            <PropertyRef Name="ID" />
-          </Key>
-          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="myanimelist" Type="Int32" />
-          <Property Name="myanimelist_myinfo" Type="Int32" />
-          <Property Name="myanimelist_myinfo_user_id" Type="Int32" />
-          <Property Name="myanimelist_myinfo_user_name" Type="String" MaxLength="6" FixedLength="false" Unicode="true" />
-          <Property Name="myanimelist_myinfo_user_export_type" Type="Int32" />
-          <Property Name="myanimelist_myinfo_user_total_anime" Type="Int32" />
-          <Property Name="myanimelist_myinfo_user_total_watching" Type="Int32" />
-          <Property Name="myanimelist_myinfo_user_total_completed" Type="Int32" />
-          <Property Name="myanimelist_myinfo_user_total_onhold" Type="Int32" />
-          <Property Name="myanimelist_myinfo_user_total_dropped" Type="Int32" />
-          <Property Name="myanimelist_myinfo_user_total_plantowatch" Type="Int32" />
-          <Property Name="myanimelist_anime" Type="Int32" />
-          <Property Name="myanimelist_anime_series_animedb_id" Type="Int32" />
-          <Property Name="myanimelist_anime_series_title" Type="String" MaxLength="98" FixedLength="false" Unicode="true" />
-          <Property Name="myanimelist_anime_series_type" Type="String" MaxLength="7" FixedLength="false" Unicode="true" />
-          <Property Name="myanimelist_anime_series_episodes" Type="Int32" />
-          <Property Name="myanimelist_anime_my_id" Type="Int32" />
-          <Property Name="myanimelist_anime_my_watched_episodes" Type="Int32" />
-          <Property Name="myanimelist_anime_my_start_date" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
-          <Property Name="myanimelist_anime_my_finish_date" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
-          <Property Name="myanimelist_anime_my_rated" Type="Int32" />
-          <Property Name="myanimelist_anime_my_score" Type="Int32" />
-          <Property Name="myanimelist_anime_my_dvd" Type="Int32" />
-          <Property Name="myanimelist_anime_my_storage" Type="Int32" />
-          <Property Name="myanimelist_anime_my_status" Type="String" MaxLength="13" FixedLength="false" Unicode="true" />
-          <Property Name="myanimelist_anime_my_comments" Type="Int32" />
-          <Property Name="myanimelist_anime_my_times_watched" Type="Int32" />
-          <Property Name="myanimelist_anime_my_rewatch_value" Type="Int32" />
-          <Property Name="myanimelist_anime_my_tags" Type="Int32" />
-          <Property Name="myanimelist_anime_my_rewatching" Type="Int32" />
-          <Property Name="myanimelist_anime_my_rewatching_ep" Type="Int32" />
-          <Property Name="myanimelist_anime_update_on_import" Type="Int32" />
-        </EntityType>
         <EntityType Name="MangaListFromExcel">
           <Key>
             <PropertyRef Name="ID" />
@@ -188,47 +74,9 @@
           <Property Name="Genres" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
           <Property Name="Additional_information" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
         </EntityType>
-        <EntityType Name="MangaListFromMAL">
-          <Key>
-            <PropertyRef Name="ID" />
-          </Key>
-          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="myanimelist" Type="Int32" />
-          <Property Name="myanimelist_myinfo" Type="Int32" />
-          <Property Name="myanimelist_myinfo_user_id" Type="Int32" />
-          <Property Name="myanimelist_myinfo_user_name" Type="String" MaxLength="6" FixedLength="false" Unicode="true" />
-          <Property Name="myanimelist_myinfo_user_export_type" Type="Int32" />
-          <Property Name="myanimelist_myinfo_user_total_manga" Type="Int32" />
-          <Property Name="myanimelist_myinfo_user_total_reading" Type="Int32" />
-          <Property Name="myanimelist_myinfo_user_total_completed" Type="Int32" />
-          <Property Name="myanimelist_myinfo_user_total_onhold" Type="Int32" />
-          <Property Name="myanimelist_myinfo_user_total_dropped" Type="Int32" />
-          <Property Name="myanimelist_myinfo_user_total_plantoread" Type="Int32" />
-          <Property Name="myanimelist_manga" Type="Int32" />
-          <Property Name="myanimelist_manga_manga_mangadb_id" Type="Int32" />
-          <Property Name="myanimelist_manga_manga_title" Type="String" MaxLength="76" FixedLength="false" Unicode="true" />
-          <Property Name="myanimelist_manga_manga_volumes" Type="Int32" />
-          <Property Name="myanimelist_manga_manga_chapters" Type="Int32" />
-          <Property Name="myanimelist_manga_my_id" Type="Int32" />
-          <Property Name="myanimelist_manga_my_read_volumes" Type="Int32" />
-          <Property Name="myanimelist_manga_my_read_chapters" Type="Int32" />
-          <Property Name="myanimelist_manga_my_start_date" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
-          <Property Name="myanimelist_manga_my_finish_date" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
-          <Property Name="myanimelist_manga_my_scanalation_group" Type="Int32" />
-          <Property Name="myanimelist_manga_my_score" Type="Int32" />
-          <Property Name="myanimelist_manga_my_storage" Type="Int32" />
-          <Property Name="myanimelist_manga_my_status" Type="String" MaxLength="12" FixedLength="false" Unicode="true" />
-          <Property Name="myanimelist_manga_my_comments" Type="Int32" />
-          <Property Name="myanimelist_manga_my_times_read" Type="Int32" />
-          <Property Name="myanimelist_manga_my_tags" Type="Int32" />
-          <Property Name="myanimelist_manga_my_reread_value" Type="Int32" />
-          <Property Name="myanimelist_manga_update_on_import" Type="Int32" />
-        </EntityType>
         <EntityContainer Name="MalAppDBEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="AnimeListFromExcels" EntityType="Self.AnimeListFromExcel" />
-          <EntitySet Name="AnimeListFromMALs" EntityType="Self.AnimeListFromMAL" />
           <EntitySet Name="MangaListFromExcels" EntityType="Self.MangaListFromExcel" />
-          <EntitySet Name="MangaListFromMALs" EntityType="Self.MangaListFromMAL" />
         </EntityContainer>
       </Schema>
     </edmx:ConceptualModels>
@@ -251,45 +99,6 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="AnimeListFromMALs">
-            <EntityTypeMapping TypeName="MalAppDBModel.AnimeListFromMAL">
-              <MappingFragment StoreEntitySet="AnimeListFromMAL">
-                <ScalarProperty Name="ID" ColumnName="ID" />
-                <ScalarProperty Name="myanimelist" ColumnName="myanimelist" />
-                <ScalarProperty Name="myanimelist_myinfo" ColumnName="myanimelist_myinfo" />
-                <ScalarProperty Name="myanimelist_myinfo_user_id" ColumnName="myanimelist_myinfo_user_id" />
-                <ScalarProperty Name="myanimelist_myinfo_user_name" ColumnName="myanimelist_myinfo_user_name" />
-                <ScalarProperty Name="myanimelist_myinfo_user_export_type" ColumnName="myanimelist_myinfo_user_export_type" />
-                <ScalarProperty Name="myanimelist_myinfo_user_total_anime" ColumnName="myanimelist_myinfo_user_total_anime" />
-                <ScalarProperty Name="myanimelist_myinfo_user_total_watching" ColumnName="myanimelist_myinfo_user_total_watching" />
-                <ScalarProperty Name="myanimelist_myinfo_user_total_completed" ColumnName="myanimelist_myinfo_user_total_completed" />
-                <ScalarProperty Name="myanimelist_myinfo_user_total_onhold" ColumnName="myanimelist_myinfo_user_total_onhold" />
-                <ScalarProperty Name="myanimelist_myinfo_user_total_dropped" ColumnName="myanimelist_myinfo_user_total_dropped" />
-                <ScalarProperty Name="myanimelist_myinfo_user_total_plantowatch" ColumnName="myanimelist_myinfo_user_total_plantowatch" />
-                <ScalarProperty Name="myanimelist_anime" ColumnName="myanimelist_anime" />
-                <ScalarProperty Name="myanimelist_anime_series_animedb_id" ColumnName="myanimelist_anime_series_animedb_id" />
-                <ScalarProperty Name="myanimelist_anime_series_title" ColumnName="myanimelist_anime_series_title" />
-                <ScalarProperty Name="myanimelist_anime_series_type" ColumnName="myanimelist_anime_series_type" />
-                <ScalarProperty Name="myanimelist_anime_series_episodes" ColumnName="myanimelist_anime_series_episodes" />
-                <ScalarProperty Name="myanimelist_anime_my_id" ColumnName="myanimelist_anime_my_id" />
-                <ScalarProperty Name="myanimelist_anime_my_watched_episodes" ColumnName="myanimelist_anime_my_watched_episodes" />
-                <ScalarProperty Name="myanimelist_anime_my_start_date" ColumnName="myanimelist_anime_my_start_date" />
-                <ScalarProperty Name="myanimelist_anime_my_finish_date" ColumnName="myanimelist_anime_my_finish_date" />
-                <ScalarProperty Name="myanimelist_anime_my_rated" ColumnName="myanimelist_anime_my_rated" />
-                <ScalarProperty Name="myanimelist_anime_my_score" ColumnName="myanimelist_anime_my_score" />
-                <ScalarProperty Name="myanimelist_anime_my_dvd" ColumnName="myanimelist_anime_my_dvd" />
-                <ScalarProperty Name="myanimelist_anime_my_storage" ColumnName="myanimelist_anime_my_storage" />
-                <ScalarProperty Name="myanimelist_anime_my_status" ColumnName="myanimelist_anime_my_status" />
-                <ScalarProperty Name="myanimelist_anime_my_comments" ColumnName="myanimelist_anime_my_comments" />
-                <ScalarProperty Name="myanimelist_anime_my_times_watched" ColumnName="myanimelist_anime_my_times_watched" />
-                <ScalarProperty Name="myanimelist_anime_my_rewatch_value" ColumnName="myanimelist_anime_my_rewatch_value" />
-                <ScalarProperty Name="myanimelist_anime_my_tags" ColumnName="myanimelist_anime_my_tags" />
-                <ScalarProperty Name="myanimelist_anime_my_rewatching" ColumnName="myanimelist_anime_my_rewatching" />
-                <ScalarProperty Name="myanimelist_anime_my_rewatching_ep" ColumnName="myanimelist_anime_my_rewatching_ep" />
-                <ScalarProperty Name="myanimelist_anime_update_on_import" ColumnName="myanimelist_anime_update_on_import" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="MangaListFromExcels">
             <EntityTypeMapping TypeName="MalAppDBModel.MangaListFromExcel">
               <MappingFragment StoreEntitySet="MangaListFromExcel">
@@ -304,43 +113,6 @@
                 <ScalarProperty Name="Type" ColumnName="Type" />
                 <ScalarProperty Name="My_status" ColumnName="My status" />
                 <ScalarProperty Name="Additional_information" ColumnName="Additional information" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="MangaListFromMALs">
-            <EntityTypeMapping TypeName="MalAppDBModel.MangaListFromMAL">
-              <MappingFragment StoreEntitySet="MangaListFromMAL">
-                <ScalarProperty Name="ID" ColumnName="ID" />
-                <ScalarProperty Name="myanimelist" ColumnName="myanimelist" />
-                <ScalarProperty Name="myanimelist_myinfo" ColumnName="myanimelist_myinfo" />
-                <ScalarProperty Name="myanimelist_myinfo_user_id" ColumnName="myanimelist_myinfo_user_id" />
-                <ScalarProperty Name="myanimelist_myinfo_user_name" ColumnName="myanimelist_myinfo_user_name" />
-                <ScalarProperty Name="myanimelist_myinfo_user_export_type" ColumnName="myanimelist_myinfo_user_export_type" />
-                <ScalarProperty Name="myanimelist_myinfo_user_total_manga" ColumnName="myanimelist_myinfo_user_total_manga" />
-                <ScalarProperty Name="myanimelist_myinfo_user_total_reading" ColumnName="myanimelist_myinfo_user_total_reading" />
-                <ScalarProperty Name="myanimelist_myinfo_user_total_completed" ColumnName="myanimelist_myinfo_user_total_completed" />
-                <ScalarProperty Name="myanimelist_myinfo_user_total_onhold" ColumnName="myanimelist_myinfo_user_total_onhold" />
-                <ScalarProperty Name="myanimelist_myinfo_user_total_dropped" ColumnName="myanimelist_myinfo_user_total_dropped" />
-                <ScalarProperty Name="myanimelist_myinfo_user_total_plantoread" ColumnName="myanimelist_myinfo_user_total_plantoread" />
-                <ScalarProperty Name="myanimelist_manga" ColumnName="myanimelist_manga" />
-                <ScalarProperty Name="myanimelist_manga_manga_mangadb_id" ColumnName="myanimelist_manga_manga_mangadb_id" />
-                <ScalarProperty Name="myanimelist_manga_manga_title" ColumnName="myanimelist_manga_manga_title" />
-                <ScalarProperty Name="myanimelist_manga_manga_volumes" ColumnName="myanimelist_manga_manga_volumes" />
-                <ScalarProperty Name="myanimelist_manga_manga_chapters" ColumnName="myanimelist_manga_manga_chapters" />
-                <ScalarProperty Name="myanimelist_manga_my_id" ColumnName="myanimelist_manga_my_id" />
-                <ScalarProperty Name="myanimelist_manga_my_read_volumes" ColumnName="myanimelist_manga_my_read_volumes" />
-                <ScalarProperty Name="myanimelist_manga_my_read_chapters" ColumnName="myanimelist_manga_my_read_chapters" />
-                <ScalarProperty Name="myanimelist_manga_my_start_date" ColumnName="myanimelist_manga_my_start_date" />
-                <ScalarProperty Name="myanimelist_manga_my_finish_date" ColumnName="myanimelist_manga_my_finish_date" />
-                <ScalarProperty Name="myanimelist_manga_my_scanalation_group" ColumnName="myanimelist_manga_my_scanalation_group" />
-                <ScalarProperty Name="myanimelist_manga_my_score" ColumnName="myanimelist_manga_my_score" />
-                <ScalarProperty Name="myanimelist_manga_my_storage" ColumnName="myanimelist_manga_my_storage" />
-                <ScalarProperty Name="myanimelist_manga_my_status" ColumnName="myanimelist_manga_my_status" />
-                <ScalarProperty Name="myanimelist_manga_my_comments" ColumnName="myanimelist_manga_my_comments" />
-                <ScalarProperty Name="myanimelist_manga_my_times_read" ColumnName="myanimelist_manga_my_times_read" />
-                <ScalarProperty Name="myanimelist_manga_my_tags" ColumnName="myanimelist_manga_my_tags" />
-                <ScalarProperty Name="myanimelist_manga_my_reread_value" ColumnName="myanimelist_manga_my_reread_value" />
-                <ScalarProperty Name="myanimelist_manga_update_on_import" ColumnName="myanimelist_manga_update_on_import" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

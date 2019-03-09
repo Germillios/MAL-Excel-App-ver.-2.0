@@ -26,8 +26,6 @@ namespace MAL_Excel_App.Models
         }
     
         public virtual DbSet<AnimeListFromExcel> AnimeListFromExcels { get; set; }
-        public virtual DbSet<AnimeListFromMAL> AnimeListFromMALs { get; set; }
         public virtual DbSet<MangaListFromExcel> MangaListFromExcels { get; set; }
-        public virtual DbSet<MangaListFromMAL> MangaListFromMALs { get; set; }
     }
 }
